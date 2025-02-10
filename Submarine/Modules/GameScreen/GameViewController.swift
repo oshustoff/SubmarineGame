@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  Submarine
 //
-//  Created by Michael Shustov on 11.12.2024.
+//  Created by Olga Shustova on 11.12.2024.
 //
 
 import UIKit

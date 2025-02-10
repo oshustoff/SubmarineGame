@@ -2,7 +2,7 @@
 //  ChooseSubmarineViewController.swift
 //  Submarine
 //
-//  Created by Michael Shustov on 05.02.2025.
+//  Created by Olga Shustova on 05.02.2025.
 //
 
 import UIKit
