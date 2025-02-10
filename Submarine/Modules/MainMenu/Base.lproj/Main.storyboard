@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f9Q-Jp-9C4">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zJT-8c-BLd">
+            <objects>
+                <navigationController id="f9Q-Jp-9C4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPo-TZ-uCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bdp-HW-rCp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzN-nX-aRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Submarine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jKI-ow-LWx">
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yy6-k0-l2R">
+                                <rect key="frame" x="100" y="94" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ktk-em-wOs"/>
+                                    <constraint firstAttribute="width" constant="150" id="aSJ-YD-xGb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="GAME"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="GAME">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="24" name="AmericanTypewriter-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="gameButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZ6-Hh-VMh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3a-yE-Qev">
+                                <rect key="frame" x="100" y="171.66666666666666" width="150" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="RECORDS">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="21" name="AcademyEngravedLetPlain"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recordButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4O-fz-siY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbO-Jo-wLk">
+                                <rect key="frame" x="100" y="290" width="150" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="OPTIONS">
+                                            <attributes>
+                                                <font key="NSFont" size="23" name="AcademyEngravedLetPlain"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="optionsButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnt-S1-h7v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="kbO-Jo-wLk" firstAttribute="centerX" secondItem="X3a-yE-Qev" secondAttribute="centerX" id="0ld-LU-LzA"/>
+                            <constraint firstItem="X3a-yE-Qev" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3NN-bZ-Mm0"/>
+                            <constraint firstItem="jKI-ow-LWx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4E3-gZ-UQM"/>
+                            <constraint firstItem="yy6-k0-l2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="5bf-ja-KCF"/>
+                            <constraint firstItem="yy6-k0-l2R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="90A-Lm-Bnl"/>
+                            <constraint firstItem="X3a-yE-Qev" firstAttribute="height" secondItem="yy6-k0-l2R" secondAttribute="height" id="9DG-5P-QdW"/>
+                            <constraint firstItem="X3a-yE-Qev" firstAttribute="width" secondItem="yy6-k0-l2R" secondAttribute="width" id="Ac5-uf-MgU"/>
+                            <constraint firstItem="X3a-yE-Qev" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="FG2-gV-oc1"/>
+                            <constraint firstItem="kbO-Jo-wLk" firstAttribute="height" secondItem="X3a-yE-Qev" secondAttribute="height" id="Nr3-1F-g5f"/>
+                            <constraint firstItem="kbO-Jo-wLk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="PkH-V6-qtN"/>
+                            <constraint firstAttribute="trailing" secondItem="jKI-ow-LWx" secondAttribute="trailing" id="RWo-ar-AhI"/>
+                            <constraint firstItem="X3a-yE-Qev" firstAttribute="centerX" secondItem="yy6-k0-l2R" secondAttribute="centerX" id="S8V-bH-wwu"/>
+                            <constraint firstAttribute="bottom" secondItem="jKI-ow-LWx" secondAttribute="bottom" id="SPS-ft-69F"/>
+                            <constraint firstAttribute="bottom" secondItem="kbO-Jo-wLk" secondAttribute="bottom" constant="50" id="VOV-NA-Gbg"/>
+                            <constraint firstItem="kbO-Jo-wLk" firstAttribute="width" secondItem="X3a-yE-Qev" secondAttribute="width" id="vI6-9U-1mG"/>
+                            <constraint firstItem="jKI-ow-LWx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x7L-8K-tfv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AqP-Hd-4Au"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gameScreenBackground" width="400" height="225"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
