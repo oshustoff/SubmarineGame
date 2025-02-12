@@ -20,6 +20,7 @@
 		52744D8A2D4FD6D900938F8D /* GameScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52744D892D4FD6D900938F8D /* GameScreen.storyboard */; };
 		528CE33E2D53BB41009902B2 /* ChooseSubmarineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CE33D2D53BB41009902B2 /* ChooseSubmarineViewController.swift */; };
 		528CE38A2D53D612009902B2 /* SubmarineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CE3892D53D612009902B2 /* SubmarineView.swift */; };
+		52C6F9422D5D0A2D00EF745C /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6F9412D5D0A2D00EF745C /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		52744D892D4FD6D900938F8D /* GameScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameScreen.storyboard; sourceTree = "<group>"; };
 		528CE33D2D53BB41009902B2 /* ChooseSubmarineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSubmarineViewController.swift; sourceTree = "<group>"; };
 		528CE3892D53D612009902B2 /* SubmarineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmarineView.swift; sourceTree = "<group>"; };
+		52C6F9412D5D0A2D00EF745C /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				5209FAF72D0A09FB00243AC1 /* GameViewController.swift */,
 				52744D892D4FD6D900938F8D /* GameScreen.storyboard */,
+				52C6F9412D5D0A2D00EF745C /* GameOverViewController.swift */,
 			);
 			path = GameScreen;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				5209FADE2D09FF8F00243AC1 /* AppDelegate.swift in Sources */,
 				528CE33E2D53BB41009902B2 /* ChooseSubmarineViewController.swift in Sources */,
 				5209FAF62D0A09F000243AC1 /* OptionsViewController.swift in Sources */,
+				52C6F9422D5D0A2D00EF745C /* GameOverViewController.swift in Sources */,
 				5209FADF2D09FF8F00243AC1 /* ViewController.swift in Sources */,
 				5209FAFC2D0A0A1100243AC1 /* RecordsViewController.swift in Sources */,
 				528CE38A2D53D612009902B2 /* SubmarineView.swift in Sources */,

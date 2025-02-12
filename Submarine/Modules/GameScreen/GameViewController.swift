@@ -14,20 +14,17 @@ class GameViewController: UIViewController {
     @IBOutlet weak var changedOxygenView: UIView!
     @IBOutlet weak var changedOxygenViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var submarineTopConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var gameScreenImage: UIImageView!
     @IBOutlet weak var upButton: UIButton!
-
     @IBOutlet weak var downButton: UIButton!
-    @IBOutlet weak var gameOverView: UIView!
-    @IBOutlet weak var infoLabel: UILabel!
+    
+    var completion: () -> Void = {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubmarineImage()
         setupOxygenLevelView()
         movingObjects()
-        gameOverView.isHidden = true
     }
     
     func setupOxygenLevelView() {
@@ -146,31 +143,29 @@ class GameViewController: UIViewController {
             {
                 timer.invalidate()
                 self.submarineImage.image = UIImage(named: "boom")
-                fishOne.isHidden = true
-                fishTwo.isHidden = true
-                fishThree.isHidden = true
-                rockOne.isHidden = true
-                rockTwo.isHidden = true
-                bigRock.isHidden = true
-                rockGreen.isHidden = true
-                greens.isHidden = true
-                myBoat.isHidden = true
-                myShip.isHidden = true
-                coin.isHidden = true
-                health.isHidden = true
-                self.upButton.isHidden = true
-                self.downButton.isHidden = true
-                self.oxygenLevelView.isHidden = true
+//                fishOne.isHidden = true
+//                fishTwo.isHidden = true
+//                fishThree.isHidden = true
+//                rockOne.isHidden = true
+//                rockTwo.isHidden = true
+//                bigRock.isHidden = true
+//                rockGreen.isHidden = true
+//                greens.isHidden = true
+//                myBoat.isHidden = true
+//                myShip.isHidden = true
+//                coin.isHidden = true
+//                health.isHidden = true
+//                self.upButton.isHidden = true
+//                self.downButton.isHidden = true
+//                self.oxygenLevelView.isHidden = true
                 
-                UIView.animate(withDuration: 0.1) {
-                    self.gameScreenImage.alpha = 0.8
+                
+                    guard let gameOverController = UIStoryboard(name: "GameScreen", bundle: nil).instantiateViewController(identifier: "GameOverViewController") as? GameOverViewController else { return }
+                        gameOverController.completion = {
+                            self.navigationController?.popToRootViewController(animated: false)
+                        }
+                   self.present(gameOverController, animated: true)
                    
-                } completion: { _ in
-                    self.gameOverView.isHidden = false
-                    self.infoLabel.text = "GAME OVER"
-                    self.submarineImage.isHidden = true
-                }
-                
             }
             
             if self.submarineImage.frame.intersects(coin.frame) {
