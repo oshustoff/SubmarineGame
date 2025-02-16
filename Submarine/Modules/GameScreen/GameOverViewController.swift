@@ -2,7 +2,7 @@
 //  GameOverViewController.swift
 //  Submarine
 //
-//  Created by Michael Shustov on 12.02.2025.
+//  Created by Olga Shustova on 12.02.2025.
 //
 
 import UIKit
@@ -21,8 +21,7 @@ class GameOverViewController: UIViewController {
     
     
     @IBAction func tryAgainButtonTap(_ sender: UIButton) {
-        guard let gameController = storyboard?.instantiateViewController(identifier: "GameViewController") as? GameViewController else { return }
-        self.present(gameController, animated: true)
+        self.dismiss(animated: false)
     }
     
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520662C02D5E38D5002E7FEB /* OptionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520662BF2D5E38D5002E7FEB /* OptionsData.swift */; };
 		5209FADA2D09FF8F00243AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5209FAD22D09FF8F00243AC1 /* Assets.xcassets */; };
 		5209FADC2D09FF8F00243AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209FAD52D09FF8F00243AC1 /* LaunchScreen.storyboard */; };
 		5209FADD2D09FF8F00243AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209FAD72D09FF8F00243AC1 /* Main.storyboard */; };
@@ -20,10 +21,14 @@
 		52744D8A2D4FD6D900938F8D /* GameScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52744D892D4FD6D900938F8D /* GameScreen.storyboard */; };
 		528CE33E2D53BB41009902B2 /* ChooseSubmarineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CE33D2D53BB41009902B2 /* ChooseSubmarineViewController.swift */; };
 		528CE38A2D53D612009902B2 /* SubmarineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CE3892D53D612009902B2 /* SubmarineView.swift */; };
+		529311A32D5F5FE10031AF84 /* UserDefaults_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529311A22D5F5FE10031AF84 /* UserDefaults_Extension.swift */; };
+		529311A52D5F6B1F0031AF84 /* RecordsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529311A42D5F6B1F0031AF84 /* RecordsData.swift */; };
+		529311A72D5F737D0031AF84 /* GameObjectsAndActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529311A62D5F737D0031AF84 /* GameObjectsAndActions.swift */; };
 		52C6F9422D5D0A2D00EF745C /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6F9412D5D0A2D00EF745C /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520662BF2D5E38D5002E7FEB /* OptionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsData.swift; sourceTree = "<group>"; };
 		5209FAB92D09FF4200243AC1 /* Submarine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Submarine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209FAD12D09FF8F00243AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5209FAD22D09FF8F00243AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +44,9 @@
 		52744D892D4FD6D900938F8D /* GameScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameScreen.storyboard; sourceTree = "<group>"; };
 		528CE33D2D53BB41009902B2 /* ChooseSubmarineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSubmarineViewController.swift; sourceTree = "<group>"; };
 		528CE3892D53D612009902B2 /* SubmarineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmarineView.swift; sourceTree = "<group>"; };
+		529311A22D5F5FE10031AF84 /* UserDefaults_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults_Extension.swift; sourceTree = "<group>"; };
+		529311A42D5F6B1F0031AF84 /* RecordsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsData.swift; sourceTree = "<group>"; };
+		529311A62D5F737D0031AF84 /* GameObjectsAndActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectsAndActions.swift; sourceTree = "<group>"; };
 		52C6F9412D5D0A2D00EF745C /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +132,8 @@
 				5209FAF32D0A09F000243AC1 /* OptionsViewController.swift */,
 				528CE33D2D53BB41009902B2 /* ChooseSubmarineViewController.swift */,
 				528CE3892D53D612009902B2 /* SubmarineView.swift */,
+				520662BF2D5E38D5002E7FEB /* OptionsData.swift */,
+				529311A22D5F5FE10031AF84 /* UserDefaults_Extension.swift */,
 			);
 			path = OptionsScreen;
 			sourceTree = "<group>";
@@ -134,6 +144,7 @@
 				5209FAF72D0A09FB00243AC1 /* GameViewController.swift */,
 				52744D892D4FD6D900938F8D /* GameScreen.storyboard */,
 				52C6F9412D5D0A2D00EF745C /* GameOverViewController.swift */,
+				529311A62D5F737D0031AF84 /* GameObjectsAndActions.swift */,
 			);
 			path = GameScreen;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			children = (
 				5209FAFB2D0A0A1100243AC1 /* RecordsViewController.swift */,
 				5209FAFD2D0A0A2700243AC1 /* RecordsScreen.storyboard */,
+				529311A42D5F6B1F0031AF84 /* RecordsData.swift */,
 			);
 			path = RecordsScreen;
 			sourceTree = "<group>";
@@ -225,9 +237,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5209FAF92D0A09FB00243AC1 /* GameViewController.swift in Sources */,
+				529311A52D5F6B1F0031AF84 /* RecordsData.swift in Sources */,
+				529311A72D5F737D0031AF84 /* GameObjectsAndActions.swift in Sources */,
 				5209FADE2D09FF8F00243AC1 /* AppDelegate.swift in Sources */,
+				529311A32D5F5FE10031AF84 /* UserDefaults_Extension.swift in Sources */,
 				528CE33E2D53BB41009902B2 /* ChooseSubmarineViewController.swift in Sources */,
 				5209FAF62D0A09F000243AC1 /* OptionsViewController.swift in Sources */,
+				520662C02D5E38D5002E7FEB /* OptionsData.swift in Sources */,
 				52C6F9422D5D0A2D00EF745C /* GameOverViewController.swift in Sources */,
 				5209FADF2D09FF8F00243AC1 /* ViewController.swift in Sources */,
 				5209FAFC2D0A0A1100243AC1 /* RecordsViewController.swift in Sources */,

@@ -14,14 +14,13 @@ class ChooseSubmarineViewController: UIViewController {
     var firstImage: UIView?
     var secondImage: UIView?
     var thirdImage: UIView?
-    var nameImage: String?
-    
+    var chooseHandler: ((String) -> Void)?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImages()
-//        addRecognizer()
+        addRecognizer()
     }
     
    // MARK: - Methods
@@ -40,6 +39,7 @@ class ChooseSubmarineViewController: UIViewController {
         guard let image = UIImage(named: "submarineOne") else { return }
         firstImage = SubmarineView(image: image)
         guard let firstImage = self.firstImage else { return }
+        firstImage.isUserInteractionEnabled = true
         self.view.addSubview(firstImage)
         NSLayoutConstraint.activate([firstImage.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
                                      firstImage.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
@@ -66,17 +66,29 @@ class ChooseSubmarineViewController: UIViewController {
                                      thirdImage.widthAnchor.constraint(equalTo: firstImage.widthAnchor)])
     }
     
-//    func addRecognizer() {
-//        let tap = UIGestureRecognizer(target: self, action: #selector(makeChoice))
-//        firstImage?.addGestureRecognizer(tap)
-//        secondImage?.addGestureRecognizer(tap)
-//        thirdImage?.addGestureRecognizer(tap)
-//    }
-//    
-//    @objc func makeChoice(sender: UITapGestureRecognizer) {
-//        let chooseOne = sender.location(in: firstImage)
-//        let chooseTwo = sender.location(in: secondImage)
-//        let chooseThree = sender.location(in: thirdImage)
-//
-//    }
+    func addRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(makeChoice))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func makeChoice(sender: UITapGestureRecognizer) {
+        let chooseOne = "submarineOne"
+        let chooseTwo = "submarineTwo"
+        let chooseThree = "submarineThree"
+        guard let chooseHandler = chooseHandler else { return }
+        if firstImage?.frame.intersects(CGRect(origin: sender.location(in: self.view), size: CGSize(width: 0, height: 0))) ?? false {
+            chooseHandler(chooseOne)
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        if secondImage?.frame.intersects(CGRect(origin: sender.location(in: self.view), size: CGSize(width: 0, height: 0))) ?? false {
+            chooseHandler(chooseTwo)
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        if thirdImage?.frame.intersects(CGRect(origin: sender.location(in: self.view), size: CGSize(width: 0, height: 0))) ?? false {
+            chooseHandler(chooseThree)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }
